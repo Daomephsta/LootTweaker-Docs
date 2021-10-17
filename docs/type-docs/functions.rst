@@ -63,7 +63,6 @@ static LootFunction smelt()
 static LootFunction parse(DataMap json)
 +++++++++++++++++++++++++++++++++++++++
 
-    Deprecated. 0.2.1 introduced entry addition methods capable of automatically parsing Maps into LootConditions.
     Parses a `DataMap <https://docs.blamejared.com/1.12/en/Vanilla/Data/DataMap/>`_ into a ``LootFunction``.
 
     :parameters: 
