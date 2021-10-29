@@ -48,7 +48,7 @@ Not Recommended
 
 Converting JSON format maps to LootCondition/LootFunction
 ---------------------------------------------------------
-As of 0.2.1 JSON format maps are automatically converted to 
+As of 0.3.0 JSON format maps are automatically converted to 
 :doc:`conditions`/:doc:`functions` as needed, so any LootFunction/LootCondition
 parameter will accept a JSON format map.
 

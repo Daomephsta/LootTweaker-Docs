@@ -15,32 +15,32 @@ and when they were be removed. The most recent deprecations are at the top
 
 Methods with the Json or Helper suffix
 --------------------------------------
-    :Reason: As of 0.2.1 JSON format maps are automatically converted to 
+    :Reason: As of 0.3.0 JSON format maps are automatically converted to 
      LootConditions/LootFunctions as needed.
     :Replacement: Method with the same name minus the suffix, e.g:
 
         * addItemEntryHelper => addItemEntry
         * addItemEntryJson => addItemEntry
 
-    :Deprecated: 0.2.1
+    :Deprecated: 0.3.0
     :Removed: Future version
 
 ``Functions.parse(DataMap json)``
 ---------------------------------
-    :Reason: As of 0.2.1 JSON format maps are automatically converted to 
+    :Reason: As of 0.3.0 JSON format maps are automatically converted to 
      LootConditions/LootFunctions as needed.
     :Replacement: Passing the DataMap directly, or casting to LootFunction 
      using ``someMap as LootFunction``.
-    :Deprecated: 0.2.1
+    :Deprecated: 0.3.0
     :Removed: Future version
 
 ``Conditions.parse(DataMap json)``
 ----------------------------------
-    :Reason: As of 0.2.1 JSON format maps are automatically converted to 
+    :Reason: As of 0.3.0 JSON format maps are automatically converted to 
      LootConditions/LootFunctions as needed.
     :Replacement: Passing the DataMap directly, or casting to LootCondition 
      using ``someMap as LootCondition``.
-    :Deprecated: 0.2.1
+    :Deprecated: 0.3.0
     :Removed: Future version
 
 ``loottweaker.vanilla.loot.LootTables``
