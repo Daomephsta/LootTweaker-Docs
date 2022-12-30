@@ -69,6 +69,8 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
+        import loottweaker.vanilla.loot.Conditions;
+
         // somePool is a LootPool created elsewhere
         somePool.addConditions([
             {"condition": "killed_by_player"},
@@ -112,7 +114,6 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
         import loottweaker.vanilla.loot.Conditions;
 
         // somePool is a LootPool created elsewhere
-        // Adds a
         somePool.addItemEntry(
             <minecraft:potato>,
             1, // weight 1, i.e. low generation chance. Actual chance depends on total pool weight.
@@ -120,7 +121,8 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
             [], // No functions
             [
                 Conditions.killedByPlayer()
-            ]
+            ],
+            "someEntry" // Optional entry name
         );
 
 .. zenscript:function:: addItemEntry(IItemStack stack, int weightIn, int qualityIn, @Optional String name)
@@ -161,6 +163,21 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
     * name - (Optional) a name for the entry. Must be unique within the pool.
 
     :errors: if the pool already contains an entry with the same name.
+
+    .. code-block:: java
+
+        import loottweaker.vanilla.loot.Conditions;
+
+        // somePool is a LootPool created elsewhere
+        somePool.addLootTableEntry(
+            "someMod:someTable",
+            1, // weight 1, i.e. low generation chance. Actual chance depends on total pool weight.
+            0, // Default quality
+            [
+                Conditions.killedByPlayer()
+            ],
+            "someEntry" // Optional entry name
+        );
 
 .. zenscript:function:: addLootTableEntry(String tableName, int weightIn, int qualityIn, @Optional String name)
 
@@ -204,6 +221,20 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     :errors: if the pool already contains an entry with the same name.
 
+    .. code-block:: java
+
+        import loottweaker.vanilla.loot.Conditions;
+
+        // somePool is a LootPool created elsewhere
+        somePool.addLootTableEntry(
+            1, // weight 1, i.e. low generation chance. Actual chance depends on total pool weight.
+            0, // Default quality
+            [
+                Conditions.killedByPlayer()
+            ],
+            "someEntry" // Optional entry name
+        );
+
 .. zenscript:function:: addEmptyEntry(int weight, int quality, @Optional String name)
 
     Adds a new ``empty`` type entry to the pool with no conditions.
@@ -237,6 +268,11 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
     * min - the new minimum rolls value
     * max - the new maximum rolls value
 
+    .. code-block:: java
+
+        // somePool is a LootPool created elsewhere
+        somePool.setRolls(0, 1);
+
 .. zenscript:function:: setBonusRolls(float min, float max)
 
     Sets the minimum and maximum bonus rolls of the pool to the specified values.
@@ -246,13 +282,28 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
     * min - the new minimum bonus rolls value.
     * max - the new maximum bonus rolls value.
 
+    .. code-block:: java
+
+        // somePool is a LootPool created elsewhere
+        somePool.setBonusRolls(0, 1);
+
 .. zenscript:function:: clearConditions()
 
     Removes all loot conditions attached to this loot pool. Loot conditions and loot functions attached to child entries are unaffected.
 
+    .. code-block:: java
+
+        // somePool is a LootPool created elsewhere
+        somePool.clearConditions();
+
 .. zenscript:function:: clearEntries()
 
     Removes all entries from this loot pool.
+
+    .. code-block:: java
+
+        // somePool is a LootPool created elsewhere
+        somePool.clearEntries();
 
 .. _map: https://docs.blamejared.com/1.12/en/AdvancedFunctions/Associative_Arrays/
 .. _maps: https://docs.blamejared.com/1.12/en/AdvancedFunctions/Associative_Arrays/

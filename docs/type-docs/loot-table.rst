@@ -11,6 +11,11 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     Removes all loot from the loot table. This includes any loot added by a script before this method was run.
 
+    .. code-block:: java
+
+        // someTable is a LootTable created elsewhere
+        someTable.clear();
+
 .. zenscript:function:: LootPool addPool(String poolName, float minRolls, float maxRolls, float minBonusRolls, float maxBonusRolls)
 
     Adds a new pool to the table, and returns it.
@@ -26,6 +31,11 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
     :errors: if a pool with the same name already exists in the table
     :returns: the new pool
 
+    .. code-block:: java
+
+        // someTable is a LootTable created elsewhere
+        val somePool = someTable.addPool("somePool", 1, 1, 0, 0);
+
 .. zenscript:function:: removePool(String poolName)
 
     Removes the pool with the name `poolName`.
@@ -35,6 +45,11 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
     * poolName - the table-unique name of the pool
 
     :errors: if no loot pool with the specified name exists.
+
+    .. code-block:: java
+
+        // someTable is a LootTable created elsewhere
+        someTable.removePool("somePool");
 
 .. zenscript:function:: LootPool getPool(String poolName)
 
@@ -46,6 +61,11 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     :errors: if no loot pool with the specified name exists.
     :returns: the loot pool with the specified name.
+
+    .. code-block:: java
+
+        // someTable is a LootTable created elsewhere
+        val somePool = someTable.getPool("somePool");
 
 Pool Names
 ----------
