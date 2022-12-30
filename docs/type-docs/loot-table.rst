@@ -1,20 +1,17 @@
 LootTable
 =========
-
-:full name: ``loottweaker.vanilla.loot.LootTable``
+.. zenscript:type:: loottweaker.vanilla.loot.LootTable
 
 Methods
 -------
 
 See :doc:`here <method-documentation-format>` for an explanation of the method documentation format used on this page.
 
-void clear()
-++++++++++++
+.. zenscript:function:: clear()
 
     Removes all loot from the loot table. This includes any loot added by a script before this method was run.
 
-LootPool addPool(String poolName, float minRolls, float maxRolls, float minBonusRolls, float maxBonusRolls)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. zenscript:function:: LootPool addPool(String poolName, float minRolls, float maxRolls, float minBonusRolls, float maxBonusRolls)
 
     Adds a new pool to the table, and returns it.
 
@@ -29,8 +26,7 @@ LootPool addPool(String poolName, float minRolls, float maxRolls, float minBonus
     :errors: if a pool with the same name already exists in the table
     :returns: the new pool
 
-void removePool(String poolName)
-++++++++++++++++++++++++++++++++
+.. zenscript:function:: removePool(String poolName)
 
     Removes the pool with the name `poolName`.
 
@@ -40,8 +36,7 @@ void removePool(String poolName)
 
     :errors: if no loot pool with the specified name exists.
 
-LootPool getPool(String poolName)
-+++++++++++++++++++++++++++++++++
+.. zenscript:function:: LootPool getPool(String poolName)
 
     Gets a LootPool by name.
 
