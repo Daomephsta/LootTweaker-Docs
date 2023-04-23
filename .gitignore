@@ -1,3 +1,4 @@
 docs/_build/
 docs/_ext/
+__pycache__
 .vscode

@@ -1,3 +1,6 @@
+import os
+import sys
+
 # -*- coding: utf-8 -*-
 # -- Project information -----------------------------------------------------
 project = 'LootTweaker'
@@ -9,10 +12,12 @@ release = version = '0.3.x'
 
 
 # -- General configuration ---------------------------------------------------
+sys.path.append(os.path.abspath("./_ext"))
 extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
-    'sphinx.ext.mathjax'
+    'sphinx.ext.mathjax',
+    'zensphinx'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -32,7 +37,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.

@@ -1,20 +1,22 @@
 LootTable
 =========
-
-:full name: ``loottweaker.vanilla.loot.LootTable``
+.. zenscript:type:: loottweaker.vanilla.loot.LootTable
 
 Methods
 -------
 
 See :doc:`here <method-documentation-format>` for an explanation of the method documentation format used on this page.
 
-void clear()
-++++++++++++
+.. zenscript:function:: clear()
 
     Removes all loot from the loot table. This includes any loot added by a script before this method was run.
 
-LootPool addPool(String poolName, float minRolls, float maxRolls, float minBonusRolls, float maxBonusRolls)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    .. code-block:: java
+
+        // someTable is a LootTable created elsewhere
+        someTable.clear();
+
+.. zenscript:function:: LootPool addPool(String poolName, float minRolls, float maxRolls, float minBonusRolls, float maxBonusRolls)
 
     Adds a new pool to the table, and returns it.
 
@@ -29,8 +31,12 @@ LootPool addPool(String poolName, float minRolls, float maxRolls, float minBonus
     :errors: if a pool with the same name already exists in the table
     :returns: the new pool
 
-void removePool(String poolName)
-++++++++++++++++++++++++++++++++
+    .. code-block:: java
+
+        // someTable is a LootTable created elsewhere
+        val somePool = someTable.addPool("somePool", 1, 1, 0, 0);
+
+.. zenscript:function:: removePool(String poolName)
 
     Removes the pool with the name `poolName`.
 
@@ -40,8 +46,12 @@ void removePool(String poolName)
 
     :errors: if no loot pool with the specified name exists.
 
-LootPool getPool(String poolName)
-+++++++++++++++++++++++++++++++++
+    .. code-block:: java
+
+        // someTable is a LootTable created elsewhere
+        someTable.removePool("somePool");
+
+.. zenscript:function:: LootPool getPool(String poolName)
 
     Gets a LootPool by name.
 
@@ -51,6 +61,11 @@ LootPool getPool(String poolName)
 
     :errors: if no loot pool with the specified name exists.
     :returns: the loot pool with the specified name.
+
+    .. code-block:: java
+
+        // someTable is a LootTable created elsewhere
+        val somePool = someTable.getPool("somePool");
 
 Pool Names
 ----------
