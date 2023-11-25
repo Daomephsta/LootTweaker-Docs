@@ -58,4 +58,4 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
     .. code-block:: java
 
         // Create a new loot table and store it for later
-        val simple_dungeon = loottweaker.LootTweaker.createTable("examplepack:dave");
+        val simple_dungeon = loottweaker.LootTweaker.newTable("examplepack:dave");
