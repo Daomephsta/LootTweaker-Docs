@@ -27,7 +27,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
-            <minecraft:potato>, 1, 0, [], // Arbitrary values for example purposes
+            <minecraft:potato>, 1, 0,
             [
                 Functions.enchantRandomly(["minecraft:looting"])
             ],
@@ -44,7 +44,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
-            <minecraft:potato>, 1, 0, [], // Arbitrary values for example purposes
+            <minecraft:potato>, 1, 0,
             [
                 // Enchant with a level from 5 to 10, allowing treasure-only enchantments
                 Functions.enchantWithLevels(5, 10, true)
@@ -62,7 +62,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
-            <minecraft:potato>, 1, 0, [], // Arbitrary values for example purposes
+            <minecraft:potato>, 1, 0,
             [
                 // 1 to 3 extra items per level of looting, maximum of 5 in total
                 Functions.lootingEnchantBonus(1, 3, 5)
@@ -80,7 +80,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
-            <minecraft:potato>, 1, 0, [], // Arbitrary values for example purposes
+            <minecraft:potato>, 1, 0,
             [
                 // Stack size of 1 to 3
                 Functions.setCount(1, 3)
@@ -99,7 +99,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
-            <minecraft:potato>, 1, 0, [], // Arbitrary values for example purposes
+            <minecraft:potato>, 1, 0,
             [
                 // 75% to 90% durability remaining (10% to 25% damage)
                 Functions.setDamage(0.75, 0.90)
@@ -117,7 +117,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
-            <minecraft:potato>, 1, 0, [], // Arbitrary values for example purposes
+            <minecraft:potato>, 1, 0,
             [
                 // Metadata of 1 to 3
                 Functions.setMetadata(1, 3)
@@ -136,7 +136,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
-            <minecraft:potato>, 1, 0, [], // Arbitrary values for example purposes
+            <minecraft:potato>, 1, 0,
             [
                 // Makes item unbreakable via NBT
                 Functions.setNBT({"Unbreakable": true})
@@ -154,7 +154,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
-            <minecraft:potato>, 1, 0, [], // Arbitrary values for example purposes
+            <minecraft:potato>, 1, 0,
             [
                 Functions.smelt()
             ],
@@ -193,7 +193,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
-            <minecraft:potato>, 1, 0, [], // Arbitrary values for example purposes
+            <minecraft:potato>, 1, 0,
             [
                 Functions.zenscript(function(IItemStack input, rng as IRandom, context as LootContext) as boolean
                 {
