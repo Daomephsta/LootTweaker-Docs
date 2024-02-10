@@ -9,7 +9,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
 .. zenscript:function:: clear()
 
-    Removes all loot from the loot table. This includes any loot added by a script before this method was run.
+    Removes all pools from this table. This includes any loot added by a script before this method was run.
 
     .. code-block:: java
 
@@ -18,7 +18,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
 .. zenscript:function:: LootPool addPool(String poolName, float minRolls, float maxRolls, float minBonusRolls, float maxBonusRolls)
 
-    Adds a new pool to the table, and returns it.
+    Adds a new pool to this table, and returns it.
 
     :parameters:
 
@@ -38,7 +38,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
 .. zenscript:function:: removePool(String poolName)
 
-    Removes the pool with the name `poolName`.
+    Removes the pool with the name `poolName` from this table.
 
     :parameters:
 
