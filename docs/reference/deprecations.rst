@@ -23,7 +23,7 @@ Methods with the Json or Helper suffix
         * addItemEntryJson => addItemEntry
 
     :Deprecated: 0.3.0
-    :Removed: Future version
+    :Removed: 0.3.3
 
 ``Functions.parse(DataMap json)``
 ---------------------------------
@@ -48,21 +48,21 @@ Methods with the Json or Helper suffix
     :Reason: The ``loottweaker.vanilla.loot.LootTables`` class was replaced by ``loottweaker.LootTweaker`` to fix confusion between it and ``loottweaker.vanilla.loot.LootTable``.
     :Replacement: ``loottweaker.LootTweaker``
     :Deprecated: 0.2.0
-    :Removed: Future version
+    :Removed: 0.3.3
 
 ``loottweaker.vanilla.loot.LootTables.getTable(String tableName)``
 ------------------------------------------------------------------
     :Reason: The ``loottweaker.vanilla.loot.LootTables`` class was replaced by ``loottweaker.LootTweaker`` to fix confusion between it and ``loottweaker.vanilla.loot.LootTable``.
     :Replacement: ``loottweaker.LootTweaker.getTable(String tableName)``
     :Deprecated: 0.2.0
-    :Removed: Future version
+    :Removed: 0.3.3
 
 ``loottweaker.vanilla.loot.LootTables.getTableUnchecked(String tableName)``
 ---------------------------------------------------------------------------
     :Reason: Improvements in how ``loottweaker.vanilla.loot.LootTables.getTable(String tableName)`` validates table ids made this method obsolete. `getTable()` can now get any table.
     :Replacement: ``loottweaker.vanilla.loot.LootTables.getTable(String tableName)``
     :Deprecated: 0.1.0
-    :Removed: Future version
+    :Removed: 0.3.3
 
 ``Functions.parse(String json)``
 --------------------------------
