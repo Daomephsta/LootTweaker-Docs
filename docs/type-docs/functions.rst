@@ -195,7 +195,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
         somePool.addItemEntry(
             <minecraft:potato>, 1, 0,
             [
-                Functions.zenscript(function(IItemStack input, rng as IRandom, context as LootContext) as boolean
+                Functions.zenscript(function(input as IItemStack, rng as IRandom, context as LootContext) as IItemStack
                 {
                     return input.withDisplayName("Super Potato");
                 })
