@@ -16,6 +16,7 @@ from zensphinx.zentype import ZenTypeDirective, ZenTypeIndex, ZenTypeXRefRole
 LOGGER = logging.getLogger(__name__)
 PRIORITY_IMPORTANT = 1
 
+
 class ZenSphinxDomain(Domain):
     name = 'zenscript'
     label = 'ZenScript extensions'
@@ -37,8 +38,8 @@ class ZenSphinxDomain(Domain):
     def add_type(self, full_name: str):
         [*_, simple_name] = full_name.split('.')
         anchor = 'zentype-' + full_name
-        type = (full_name, simple_name,
-            'ZenType', self.env.docname, anchor, PRIORITY_IMPORTANT)
+        type = (full_name, simple_name, 'ZenType',
+                self.env.docname, anchor, PRIORITY_IMPORTANT)
         self.data['types_by_name'][full_name] = type
         self.data['types_by_simple_name'][simple_name].append(type)
 
@@ -46,15 +47,17 @@ class ZenSphinxDomain(Domain):
         return self.data['types_by_name'].values()
 
     def resolve_xref(self, env: 'BuildEnvironment', fromdocname: str,
-        builder: 'Builder', typ: str, target: str,
-        node: pending_xref, contnode: Element) -> Optional[Element]:
+                     builder: 'Builder', typ: str, target: str,
+                     node: pending_xref, contnode: Element
+                     ) -> Optional[Element]:
 
         if '.' not in target:
             matches = self.data['types_by_simple_name'][target]
             if not matches:
                 match = None
             elif len(matches) > 1:
-                LOGGER.warning(f'{fromdocname}: Multiple types named {target}. Fully qualify the reference')
+                LOGGER.warning(f'{fromdocname}: Multiple types named {target}.'
+                               ' Fully qualify the reference')
                 return None
             else:
                 match = matches[0]
@@ -62,14 +65,16 @@ class ZenSphinxDomain(Domain):
             match = self.data['types_by_name'].get(target)
         if match:
             _, _, _, to_docname, match_target, _ = match
-            return sphinx_nodes.make_refnode(builder, fromdocname, to_docname,
+            return sphinx_nodes.make_refnode(
+                builder, fromdocname, to_docname,
                 match_target, contnode, match_target)
         else:
             LOGGER.warning(f'Could not resolve {target}', location=node.source)
             return None
 
     def get_full_qualified_name(self, node: Element) -> Optional[str]:
-        return 'zensphinx.' + node.arguments[0]
+        return 'zensphinx.' + node.arguments[0]  # type: ignore
+
 
 def setup(app: Sphinx):
     app.add_domain(ZenSphinxDomain)

@@ -9,9 +9,13 @@ from sphinx.directives import ObjectDescription
 
 ANNOTATION = re.compile(r'@\w+\s*')
 
-def multi(suboptions: List[Callable[[str], Any]]) -> Callable[[str], List[Any]]:
-    return lambda str: [suboption(raw) for suboption, raw in 
-        zip(suboptions, str.split(' '))]
+
+def multi(
+          suboptions: List[Callable[[str], Any]]
+         ) -> Callable[[str], List[Any]]:
+    return lambda str: [suboption(raw) for suboption, raw in
+                        zip(suboptions, str.split(' '))]
+
 
 class ZenFunctionDirective(ObjectDescription):
     option_spec = {
@@ -25,17 +29,18 @@ class ZenFunctionDirective(ObjectDescription):
         if array_brackets != -1:
             link.append(Text(type_name[array_brackets:]))
             type_name = type_name[:array_brackets]
-        if 'external-type' in self.options and\
-            self.options['external-type'][0] == type_name:
-            link.insert(0, reference('', Text(type_name), 
-               refuri=self.options['external-type'][1]))
+        ext_type_0 = self.options['external-type'][0]
+        if 'external-type' in self.options and ext_type_0 == type_name:
+            link.insert(0, reference('', Text(type_name),
+                                     refuri=self.options['external-type'][1]))
         else:
-            link.insert(0, pending_xref('', Text(type_name), 
-                refdomain=self.domain, reftype='zentype', reftarget=type_name))
+            link.insert(0, pending_xref(
+                '', Text(type_name), refdomain=self.domain,
+                reftype='zentype', reftarget=type_name))
         return link
 
-    def parse_signature(self, signature: str)\
-        -> tuple[bool, str, str, list[tuple[str, str]]]:
+    def parse_signature(self, signature: str
+                        ) -> tuple[bool, str, str, list[tuple[str, str]]]:
 
         args_start = signature.find('(')
         match signature[:args_start].split(' ', maxsplit=2):
@@ -53,14 +58,16 @@ class ZenFunctionDirective(ObjectDescription):
                 raise ValueError('Could not parse ' + signature)
 
         # Isolate parameter list
-        parameters = signature[args_start + 1:-1]
-        if parameters:
+        parameters: list[tuple[str, str]]
+        parameters_temp = signature[args_start + 1:-1]
+        if parameters_temp:
             # Strip annotations
-            parameters = ANNOTATION.sub('', parameters)
+            parameters_temp = ANNOTATION.sub('', parameters_temp)
             # Split into individual parameters
-            parameters = parameters.split(',')
+            parameters_temp = parameters_temp.split(',')
             # Map parameters into name-type pairs
-            parameters = [tuple(p.strip().split(' ')) for p in parameters]
+            parameters = [tuple(p.strip().split(' '))  # type: ignore
+                          for p in parameters_temp]
         else:
             parameters = []
         return static, return_type, name, parameters
@@ -80,7 +87,9 @@ class ZenFunctionDirective(ObjectDescription):
             if parameter != parameters[-1]:
                 signode += Text(', ')
         signode += Text(') ')
-        return f"zenfunction-{name}({'-'.join([type for type, _ in parameters])})"
+        parameter_types = '-'.join([type for type, _ in parameters])
+        return f'zenfunction-{name}({parameter_types})'
 
-    def add_target_and_index(self, name: str, sig: str, signode: desc_signature):
+    def add_target_and_index(self, name: str, sig: str,
+                             signode: desc_signature):
         signode['ids'].append(name)
