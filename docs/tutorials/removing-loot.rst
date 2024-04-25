@@ -1,8 +1,14 @@
 Removing Loot
 =============
+.. note::
+    This tutorial assumes that you have read :doc:`Crash Course in the Basics <crash-course-basics>`. If you have not, do so before reading this tutorial.
 
 In this tutorial you will learn how to remove loot from a loot table. I will be removing
-porkchops from the pig loot table as an example. To do this we need to know 3 things,
+porkchops from the pig loot table as an example. Though a loot table for entity drops is used in these examples, the same process works for any loot table, regardless of what it's used for.
+
+Vanilla items, pools, tables, etc. are used in the examples; but the same steps work for mod items, pools, tables, etc. 
+
+To do this we need to know 3 things,
 the name of the pig's loot table, the name of the pool with the porkchop entry, and
 the name of the porkchop entry. To obtain that information follow these steps:
 
@@ -21,7 +27,7 @@ a) If the table is for an entity, spawn the entity ingame. Now look at the entit
 b) If it's for a loot chest, find a loot container that you think has the right loot table
    and **do not** open it. Now look at the chest and run the command ``/ct loottables target``.
 c) If it's neither of the above, check the the mod's documentation, or for vanilla,
-   `this list <https://minecraft.gamepedia.com/Loot_table#List_of_loot_tables>`_.
+   `this list <https://minecraft.gamepedia.com/Loot_table?oldid=1192000#List_of_loot_tables>`_.
 
 If you found the name using c), run the command ``/ct loottables byName <loot table name>`` before continuing.
 

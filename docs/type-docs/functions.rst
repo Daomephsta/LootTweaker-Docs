@@ -7,7 +7,7 @@ It provides methods for creating simple loot functions, but if you wish to use c
 ``minecraft:set_attributes`` does not have a helper method as it is too complex.
 
 All methods on this page, except ``parse()`` create a vanilla loot function, so their parameters are equivalent to the parameters of the equivalent loot function.
-All vanilla loot functions are listed and documented `here <https://minecraft.gamepedia.com/Loot_table#Functions>`_.
+All vanilla loot functions are listed and documented `here <https://minecraft.gamepedia.com/Loot_table?oldid=1192000#Functions>`_.
 
 The corresponding type for loot conditions is :doc:`conditions`.
 

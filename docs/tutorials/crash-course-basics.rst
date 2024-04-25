@@ -1,5 +1,7 @@
 Crash Course in the Basics
 ==========================
+.. note::
+    This tutorial assumes that you have read :doc:`Getting Started </getting-started>`. If you have not, do so before reading this tutorial.
 
 LootTweaker makes use of some features of CraftTweaker that you may not be familiar with, even if you have used CraftTweaker before.
 This tutorial provides a quick crash course in those features.

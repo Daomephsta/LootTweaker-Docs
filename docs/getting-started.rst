@@ -29,7 +29,7 @@ Valuable Reading
 * `The basics of variables <http://crafttweaker.readthedocs.io/en/latest/#Vanilla/Variable_Types/Variable_Types/>`_
 * `More on Variables <http://minetweaker3.powerofbytes.com/wiki/Tutorial:Basic_Recipes#Using_variables>`_
 * :doc:`Various useful LootTweaker tips and tricks <tips-and-tricks>`
-* `The MC Wiki Article on Loot Tables <https://minecraft.gamepedia.com/Loot_table>`_
+* `The MC Wiki Article on Loot Tables <https://minecraft.gamepedia.com/Loot_table?oldid=1192000>`_
 * :doc:`LootTweaker Tutorials <tutorials/tutorial-index>`
 
 Video Tutorials

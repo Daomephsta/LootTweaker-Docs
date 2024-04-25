@@ -7,7 +7,7 @@ It provides methods for creating simple loot conditions, but if you wish to use 
 ``minecraft:entity_properties`` and ``minecraft:entity_scores`` do not have helper methods as they are too complex.
 
 All methods on this page, except ``parse()`` create a vanilla loot condition, so their parameters are equivalent to the parameters of the equivalent loot condition.
-All vanilla loot conditions are listed and documented `here <https://minecraft.gamepedia.com/Loot_table#Conditions>`_.
+All vanilla loot conditions are listed and documented `here <https://minecraft.gamepedia.com/Loot_table?oldid=1192000#Conditions>`_.
 
 The corresponding type for loot functions is :doc:`functions`.
 

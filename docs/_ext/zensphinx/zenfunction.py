@@ -29,8 +29,8 @@ class ZenFunctionDirective(ObjectDescription):
         if array_brackets != -1:
             link.append(Text(type_name[array_brackets:]))
             type_name = type_name[:array_brackets]
-        ext_type_0 = self.options['external-type'][0]
-        if 'external-type' in self.options and ext_type_0 == type_name:
+        if ('external-type' in self.options and
+                self.options['external-type'][0] == type_name):
             link.insert(0, reference('', Text(type_name),
                                      refuri=self.options['external-type'][1]))
         else:

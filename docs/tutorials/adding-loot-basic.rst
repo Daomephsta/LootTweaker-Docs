@@ -1,5 +1,7 @@
 Adding Loot (Basic)
 ===================
+.. note::
+    This tutorial assumes that you have read :doc:`Removing Loot <removing-loot>`. If you have not, do so before reading this tutorial.
 
 In this tutorial you will learn the basics of adding loot to a loot table. This tutorial covers quality, weight, luck, the different types of loot entries, the basics of loot generation, and basic loot addition. Conditions and functions are covered in the next tutorial.
 
@@ -19,7 +21,7 @@ The player's luck defaults to 0. In vanilla, it can be increased by the Luck sta
 
 Types of loot entries
 ---------------------
-In vanilla, there are 3 types of loot entries:
+There are 3 types of loot entries:
 
 - Item entry - Generates an item. Takes functions as well as conditions.
 - Loot table entry - Generates loot from another loot table.
@@ -39,6 +41,10 @@ To add loot, you'll need to know the name of the loot table and the name of the 
 | Finally, I add an apple to steve.
 | ``steve.addItemEntry(<minecraft:apple>, 5);``
 | The last parameter is the weight.
+
+Though a loot table for entity drops is used in these examples, the same process works for any loot table, regardless of what it's used for.
+
+Vanilla items, pools, tables, etc. are used in the examples; but the same steps work for mod items, pools, tables, etc. 
 
 The Complete Script
 -------------------
