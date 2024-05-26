@@ -11,19 +11,19 @@ Subcommands
     | Example:
     | ``/ct loottables all``
 
-.. option:: byName <tableID>
+.. option:: byName <lootTableId>
 
     | Dumps the loot table with the specified ID.
     | Example:
     | ``/ct loottables byName minecraft:chests/simple_dungeon``
 
-.. option:: generate chest
+.. option:: generate chest <lootTableId>
 
     | Generates a chest that uses the specified loot table at the position the player is looking at.
     | Example:
     | ``/ct loottables generate chest minecraft:chests/simple_dungeon``
 
-.. option:: generate entity
+.. option:: generate entity <lootTableId> <entityId> [entityNbt]
 
     | Summons an entity that uses the specified loot table at the position the player is looking at.
     | Chest minecarts and similar will generate the loot into their inventory. Other entities will drop the loot on death.
