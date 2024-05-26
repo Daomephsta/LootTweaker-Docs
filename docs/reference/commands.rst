@@ -19,7 +19,7 @@ Subcommands
 
     .. note::
 
-        Loot containers lose their loot table data after they are first opened, and some entities don't have a loot table (e.g The Wither).
+        Some entities don't have a loot table (e.g The Wither).
 
 .. option:: byName <tableID>
 

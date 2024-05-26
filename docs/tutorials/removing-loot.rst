@@ -24,8 +24,7 @@ a) If the table is for an entity, spawn the entity ingame. Now look at the entit
    is a vanilla example (`More Loot Tables <https://minecraft.curseforge.com/projects/more-loot-tables>`_ adds one).
    If a modded entity does not have a loot table, you will have to ask the author to add one.
    Until they do you can use `CraftTweaker's Drop Functions <https://crafttweaker.readthedocs.io/en/latest/#Vanilla/Entities/IEntityDefinition/#drops>`_.
-b) If it's for a loot chest, find a loot container that you think has the right loot table
-   and **do not** open it. Now look at the chest and run the command ``/ct loottables target``.
+b) If it's for a loot chest, find a loot container that you think has the right loot table. Now look at the chest and run the command ``/ct loottables target``.
 c) If it's neither of the above, check the the mod's documentation, or for vanilla,
    `this list <https://minecraft.gamepedia.com/Loot_table?oldid=1192000#List_of_loot_tables>`_.
 
