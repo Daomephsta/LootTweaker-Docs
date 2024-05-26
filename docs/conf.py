@@ -4,11 +4,11 @@ import sys
 # -*- coding: utf-8 -*-
 # -- Project information -----------------------------------------------------
 project = 'LootTweaker'
-copyright = '2018-2019, Daomephsta'
+copyright = '2018-2024, Daomephsta'
 author = 'Daomephsta'
 
 # The short X.Y version
-release = version = '0.3.x'
+release = version = '0.4.x'
 
 
 # -- General configuration ---------------------------------------------------
