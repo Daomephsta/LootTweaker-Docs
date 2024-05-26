@@ -1,6 +1,6 @@
 LootFunction
 ============
-.. zenscript:type:: loottweaker.vanilla.loot.LootFunction
+.. zenscript:type:: loottweaker.LootFunction
 
 Represents a loot function. Either created using a method of the :doc:`functions` class,
 or automatically converted from a :ref:`JSON format map <json-format-maps>`
@@ -22,7 +22,7 @@ Methods
 
     .. code-block:: java
 
-      import loottweaker.vanilla.loot.Conditions;
+      import loottweaker.Conditions;
 
       // someLootFunction is a LootFunction created elsewhere
       someLootFunction.addConditions([

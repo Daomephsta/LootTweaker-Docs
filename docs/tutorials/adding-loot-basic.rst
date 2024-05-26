@@ -53,8 +53,8 @@ Here's the script in one block, for easier reading
 .. code-block:: none
 
     import loottweaker.LootTweaker;
-    import loottweaker.vanilla.loot.LootTable;
-    import loottweaker.vanilla.loot.LootPool;
+    import loottweaker.LootTable;
+    import loottweaker.LootPool;
     // Get the cow loot table and store it for later use
     val cow = LootTweaker.getTable("minecraft:entities/cow");
     // Add a pool called steve to the cow loot table, then store it for later use

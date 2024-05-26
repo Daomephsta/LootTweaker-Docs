@@ -54,7 +54,7 @@ Example 2
 ---------
 :Type:
 
-.. zenscript:type:: loottweaker.vanilla.loot.LootTable
+.. zenscript:type:: loottweaker.LootTable
    :noindex:
 
 :Method:
@@ -73,7 +73,7 @@ Example 3
 ---------
 :Type:
 
-.. zenscript:type:: loottweaker.vanilla.loot.LootPool
+.. zenscript:type:: loottweaker.LootPool
    :noindex:
 
 :Method:

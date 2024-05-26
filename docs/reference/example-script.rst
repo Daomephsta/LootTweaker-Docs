@@ -4,10 +4,10 @@ Example Script
 .. code-block:: none 
 
     import loottweaker.LootTweaker;
-    import loottweaker.vanilla.loot.LootTable;
-    import loottweaker.vanilla.loot.LootPool;
-    import loottweaker.vanilla.loot.Conditions;
-    import loottweaker.vanilla.loot.Functions;
+    import loottweaker.LootTable;
+    import loottweaker.LootPool;
+    import loottweaker.Conditions;
+    import loottweaker.Functions;
 
     //Get the sheep loot table and store it for later use
     val sheep = LootTweaker.getTable("minecraft:entities/sheep");

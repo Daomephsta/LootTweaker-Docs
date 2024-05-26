@@ -1,6 +1,6 @@
 Conditions
 ==========
-.. zenscript:type:: loottweaker.vanilla.loot.Conditions
+.. zenscript:type:: loottweaker.Conditions
 
 JSON can be verbose and difficult to write. This type can help.
 It provides methods for creating simple loot conditions, but if you wish to use complex loot conditions you still have to write them in JSON.
@@ -23,7 +23,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Conditions;
+        import loottweaker.Conditions;
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
@@ -39,7 +39,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Conditions;
+        import loottweaker.Conditions;
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
@@ -56,7 +56,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Conditions;
+        import loottweaker.Conditions;
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
@@ -72,7 +72,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Conditions;
+        import loottweaker.Conditions;
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
@@ -110,7 +110,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
         import crafttweaker.util.IRandom;
         import loottweaker.LootContext;
-        import loottweaker.vanilla.loot.Conditions;
+        import loottweaker.Conditions;
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(

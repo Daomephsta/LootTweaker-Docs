@@ -1,6 +1,6 @@
 Functions
 =========
-.. zenscript:type:: loottweaker.vanilla.loot.Functions
+.. zenscript:type:: loottweaker.Functions
 
 JSON can be verbose and difficult to write. This type can help.
 It provides methods for creating simple loot functions, but if you wish to use complex loot functions you still have to write them in JSON.
@@ -23,7 +23,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Functions;
+        import loottweaker.Functions;
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
@@ -40,7 +40,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Functions;
+        import loottweaker.Functions;
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
@@ -58,7 +58,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Functions;
+        import loottweaker.Functions;
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
@@ -76,7 +76,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Functions;
+        import loottweaker.Functions;
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
@@ -95,7 +95,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Functions;
+        import loottweaker.Functions;
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
@@ -113,7 +113,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Functions;
+        import loottweaker.Functions;
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
@@ -132,7 +132,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Functions;
+        import loottweaker.Functions;
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
@@ -150,7 +150,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Functions;
+        import loottweaker.Functions;
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
@@ -189,7 +189,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
         import crafttweaker.item.IItemStack;
         import crafttweaker.util.IRandom;
         import loottweaker.LootContext;
-        import loottweaker.vanilla.loot.Functions;
+        import loottweaker.Functions;
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(

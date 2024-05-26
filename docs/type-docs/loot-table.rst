@@ -1,6 +1,6 @@
 LootTable
 =========
-.. zenscript:type:: loottweaker.vanilla.loot.LootTable
+.. zenscript:type:: loottweaker.LootTable
 
 Methods
 -------
@@ -9,7 +9,11 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
 .. zenscript:function:: clear()
 
-    Removes all pools from this table. This includes any loot added by a script before this method was run.
+    Removes all pools from this table. This includes any pools added by a script before this method was run. 
+
+    :see:
+
+    * remove
 
     .. code-block:: java
 

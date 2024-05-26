@@ -1,6 +1,6 @@
 LootPool
 ========
-.. zenscript:type:: loottweaker.vanilla.loot.LootPool
+.. zenscript:type:: loottweaker.LootPool
 
 Each instance of this type represents a specific pool of a loot table.
 
@@ -69,7 +69,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Conditions;
+        import loottweaker.Conditions;
 
         // somePool is a LootPool created elsewhere
         somePool.addConditions([
@@ -111,7 +111,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Conditions;
+        import loottweaker.Conditions;
 
         // somePool is a LootPool created elsewhere
         somePool.addItemEntry(
@@ -166,7 +166,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Conditions;
+        import loottweaker.Conditions;
 
         // somePool is a LootPool created elsewhere
         somePool.addLootTableEntry(
@@ -223,7 +223,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     .. code-block:: java
 
-        import loottweaker.vanilla.loot.Conditions;
+        import loottweaker.Conditions;
 
         // somePool is a LootPool created elsewhere
         somePool.addLootTableEntry(

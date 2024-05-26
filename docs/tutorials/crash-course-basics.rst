@@ -17,8 +17,8 @@ type
 instance
     a representation of particular kind of thing. Created from a type.
 
-As an example, consider the type ``loottweaker.vanilla.loot.LootPool``, which represents a loot pool.
-There is only one type called ``loottweaker.vanilla.loot.LootPool``, but there are many instances of it,
+As an example, consider the type ``loottweaker.LootPool``, which represents a loot pool.
+There is only one type called ``loottweaker.LootPool``, but there are many instances of it,
 one for each loot pool.
 
 method
@@ -43,8 +43,8 @@ instance method
 | Calling it looks something like this ``loottweaker.LootTweaker.getTable("minecraft:entities/pig")``.
 | Common notation for a static method is ``type_name.method_name()``, e.g. ``LootTweaker.getTable()``. Parameters are not included in the notation.
 
-| An example of an instance method is the method ``getPool`` of the type ``loottweaker.vanilla.loot.LootTable``.
-| Calling it looks something like this ``pigTable.getPool("main")``, where ``pigTable`` is an instance of ``loottweaker.vanilla.loot.LootTable``.
+| An example of an instance method is the method ``getPool`` of the type ``loottweaker.LootTable``.
+| Calling it looks something like this ``pigTable.getPool("main")``, where ``pigTable`` is an instance of ``loottweaker.LootTable``.
 | Common notation (not syntax, so not valid code!) for an instance method is ``type_name#method_name()``, e.g. ``LootTable#getPool()``. Parameters are not included in the notation.
 
 Crash Course in Local Variables
