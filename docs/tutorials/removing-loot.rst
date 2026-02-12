@@ -27,6 +27,8 @@ a) If the table is for an entity, spawn the entity ingame. Now look at the entit
 b) If it's for a loot chest, find a loot container that you think has the right loot table. Now look at the chest and run the command ``/ct loottables target``.
 c) If it's neither of the above, check the the mod's documentation, or for vanilla,
    `this list <https://minecraft.gamepedia.com/Loot_table?oldid=1192000#List_of_loot_tables>`_.
+d) Run the command ``/ct loottables all``, then search the /dumps subfolder for the table. At the top of the file you'll see the key "daomephsta_loot_shared:info". Inside this is LootTweaker's guess at the ID for this loot table, with the key "id". 
+   This should be correct unless the mod ID contains a ``/`` such as ``foo/bar``, in which case LootTweaker will mistakenly guess that the namespace is ``foo`` and ``bar`` is part of the path, resulting in the incorrect ID ``foo:bar/realpath`` rather than ``foo/bar:realpath``.
 
 If you found the name using c), run the command ``/ct loottables byName <loot table name>`` before continuing.
 

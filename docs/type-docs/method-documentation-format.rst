@@ -91,8 +91,9 @@ Example 3
    // Usage of optional name argument
    somePool.addItemEntry(<minecraft:apple>, 3, "apple");
 
-Common Types
-------------
+ZenScript and CraftTweaker Types
+--------------------------------
+LootTweaker uses the following types from ZenScript itself and CraftTweaker
 
 .. zenscript:type:: boolean
 
@@ -137,6 +138,26 @@ Common Types
     :examples: * ``<minecraft:apple>``
                * ``<minecraft:potato> * 3``
                * ``<minecraft:dye:3>``
+
+.. zenscript:type:: crafttweaker.world.IWorld
+
+   See `CraftTweaker documentation <https://docs.blamejared.com/1.12/en/Vanilla/World/IWorld/>`__
+
+.. zenscript:type:: crafttweaker.world.IBlockPos
+
+   See `CraftTweaker documentation <https://docs.blamejared.com/1.12/en/Vanilla/World/IBlockPos/>`__
+
+.. zenscript:type:: crafttweaker.entity.IEntity
+
+   See `CraftTweaker documentation <https://docs.blamejared.com/1.12/en/Vanilla/Entities/IEntity/>`__
+
+.. zenscript:type:: crafttweaker.player.IPlayer
+
+   See `CraftTweaker documentation <https://docs.blamejared.com/1.12/en/Vanilla/Players/IPlayer/>`__
+
+.. zenscript:type:: crafttweaker.damage.IDamageSource
+
+   See `CraftTweaker documentation <https://docs.blamejared.com/1.12/en/Vanilla/Damage/IDamageSource/>`__
 
 .. _Array Types:
 

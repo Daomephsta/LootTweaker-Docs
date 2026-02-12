@@ -8,7 +8,7 @@ copyright = '2018-2024, Daomephsta'
 author = 'Daomephsta'
 
 # The short X.Y version
-release = version = '0.4.x'
+release = version = '0.5.x'
 
 
 # -- General configuration ---------------------------------------------------

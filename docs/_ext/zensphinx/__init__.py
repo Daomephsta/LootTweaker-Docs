@@ -2,7 +2,7 @@ from collections import defaultdict
 from typing import Iterable, Optional, Tuple
 
 import sphinx.util.nodes as sphinx_nodes
-from docutils.nodes import Element
+from docutils.nodes import Element, reference
 from sphinx.addnodes import pending_xref
 from sphinx.application import Sphinx
 from sphinx.builders import Builder
@@ -32,7 +32,7 @@ class ZenSphinxDomain(Domain):
     ]
     initial_data = {
         'types_by_name': {},
-        'types_by_simple_name': defaultdict(list)
+        'types_by_simple_name': defaultdict(set)
     }
 
     def add_type(self, full_name: str):
@@ -41,7 +41,7 @@ class ZenSphinxDomain(Domain):
         type = (full_name, simple_name, 'ZenType',
                 self.env.docname, anchor, PRIORITY_IMPORTANT)
         self.data['types_by_name'][full_name] = type
-        self.data['types_by_simple_name'][simple_name].append(type)
+        self.data['types_by_simple_name'][simple_name].add(type)
 
     def get_objects(self) -> Iterable[Tuple[str, str, str, str, str, int]]:
         return self.data['types_by_name'].values()
@@ -49,10 +49,9 @@ class ZenSphinxDomain(Domain):
     def resolve_xref(self, env: 'BuildEnvironment', fromdocname: str,
                      builder: 'Builder', typ: str, target: str,
                      node: pending_xref, contnode: Element
-                     ) -> Optional[Element]:
-
+                     ) -> None | reference:
         if '.' not in target:
-            matches = self.data['types_by_simple_name'][target]
+            matches: set = self.data['types_by_simple_name'][target]
             if not matches:
                 match = None
             elif len(matches) > 1:
@@ -60,7 +59,7 @@ class ZenSphinxDomain(Domain):
                                ' Fully qualify the reference')
                 return None
             else:
-                match = matches[0]
+                [match] = matches
         else:
             match = self.data['types_by_name'].get(target)
         if match:

@@ -32,7 +32,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
     Gets a loot table by name.
 
     :parameters:
-        * *tableName* - the unique name of the table.
+        * tableName - the unique name of the table.
     :errors: if no loot table exists with the specified name.
     :returns: the table with the specified name.
 
@@ -49,7 +49,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     :parameters:
         * tableName - the unique name of the table. It should be similar to your pack name.
-          Avoid using *minecraft* or *loottweaker* as namespaces for tables your pack creates.
+          Avoid using ``minecraft`` or ``loottweaker`` as namespaces for tables your pack creates.
     :warns: if the table name implicitly or explicitly uses the minecraft namespace.
      This warning can be disabled in LootTweaker's config.
     :errors: if a loot table with the specified name already exists.
@@ -59,3 +59,25 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
         // Create a new loot table and store it for later
         val dave = loottweaker.LootTweaker.newTable("examplepack:dave");
+
+.. zenscript:function:: static LootGenerator createLootGenerator(IWorld world)
+
+    Creates a new :doc:`loot generator <loot-generator>` for generating loot with the loot tables of a specific world.
+
+    :parameters:
+        * world - the world to retrieve loot tables from. Must be a serverside world (``world.remote`` is false).
+    :errors: if `world` is not a serverside world.
+    :returns: a new LootGenerator with an empty loot context (no player, looted entity, etc), ready for configuration.
+
+    .. code-block:: java
+
+        // A simple example focusing on the most important code
+        // world is an IWorld val/var defined and set elsewhere
+        if (!world.remote)
+        {
+            val cowItems = LootTweaker.createLootGenerator(world)
+                .generate("minecraft:entities/cow");
+            for item in cowItems {
+                print(item);
+            }
+        }

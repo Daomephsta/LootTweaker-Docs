@@ -10,3 +10,4 @@ ZenScript Types
     loot-condition
     loot-function
     loot-context
+    loot-generator

@@ -12,9 +12,9 @@ NORMAL_ENTRY = 0
 
 
 class ZenTypeDirective(ObjectDescription):
-    def handle_signature(self, signature: str, signature_node: desc_signature):
-        signature_node += desc_name(text=signature)
-        return signature
+    def handle_signature(self, sig: str, signode: desc_signature):
+        signode += desc_name(text=sig)
+        return sig
 
     def add_target_and_index(self, name, sig: str, signode: desc_signature):
         signode['ids'].append('zentype-' + sig)
