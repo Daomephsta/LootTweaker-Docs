@@ -176,7 +176,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
     Adapts ``zenFunction`` into a ``LootFunction``.
 
     :parameters:
-        * zenFunction - a `ZenScript function <https://docs.blamejared.com/1.12/en/AdvancedFunctions/Custom_Functions>`
+        * zenFunction - a `ZenScript function <https://docs.blamejared.com/1.12/en/AdvancedFunctions/Custom_Functions>`_
           with parameters ``(IItemStack, IRandom, LootContext)`` and return type ``IItemStack``.
     :returns: a loot condition which changes the generated item using ``zenFunction``.
     :see:
@@ -205,5 +205,5 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
 .. zenscript:type:: loottweaker.CustomLootFunction
 
-    A `ZenScript function <https://docs.blamejared.com/1.12/en/AdvancedFunctions/Custom_Functions>_`
+    A `ZenScript function <https://docs.blamejared.com/1.12/en/AdvancedFunctions/Custom_Functions>`_
     with parameters ``(IItemStack, IRandom, LootContext)`` and return type ``IItemStack``.
