@@ -169,7 +169,7 @@ Arrays are created by surrounding the elements in square brackets and separating
     ["Alice", "Bob", "Charlie"]
     [1, 2, 3, 4, 5]
 
-More info `here <https://crafttweaker.readthedocs.io/en/latest/#AdvancedFunctions/Arrays_and_Loops/#arrays>`__.
+More info `here <https://docs.blamejared.com/1.12/en/AdvancedFunctions/Arrays_and_Loops/>`__.
 
 Optional arguments
 ------------------

@@ -9,11 +9,11 @@ You’ll find information about these concepts in the links found in the Valuabl
 
 Useful Concepts
 ---------------
-This documentation will include examples allow you to make immediate and basic changes to your ModPacks Loot Tables. 
+This documentation will include examples allow you to make immediate and basic changes to your Modpack's Loot Tables. 
 Moving beyond the basics is going to require a more thorough understanding of the systems that drive loot tables in Minecraft, and ZenScript, 
 the language that the Tweaker suite runs on. The more you know about these topics, the more effective your use of LootTweaker will be.
 
-* **Zenscript**: ZenScript is a language developed for use with CraftTweaker implemented by all of its add-ons. A basic understanding of ZenScript can be gained on the CraftTweaker documentation page `here <https://docs.blamejared.com/1.12/en/#Getting_Started/>`_. A good place to get some experience using this language is writing `crafting recipes <https://docs.blamejared.com/1.12/en/#Vanilla/Recipes/Crafting/Recipes_Crafting_Table/>`_ with CraftTweaker.
+* **Zenscript**: ZenScript is a language developed for use with CraftTweaker implemented by all of its add-ons. A basic understanding of ZenScript can be gained on the CraftTweaker documentation page `here <https://docs.blamejared.com/1.12/en/Getting_Started/>`_. A good place to get some experience using this language is writing `crafting recipes <https://docs.blamejared.com/1.12/en/Vanilla/Recipes/Crafting/Recipes_Crafting_Table/>`_ with CraftTweaker.
 * **Minecraft LootTable Concepts**: The MC Wiki's `entry on loot tables <https://minecraft.wiki/w/Loot_table?oldid=1192000>`_ will help you understand how the system works and give you some idea of the scope of things that are possible to accomplish with it.
 
 
@@ -26,8 +26,7 @@ and the breakdown of a LootTweaker script applying these concepts.
 Valuable Reading
 ----------------
 
-* `The basics of variables <http://crafttweaker.readthedocs.io/en/latest/#Vanilla/Variable_Types/Variable_Types/>`_
-* `More on Variables <http://minetweaker3.powerofbytes.com/wiki/Tutorial:Basic_Recipes#Using_variables>`_
+* `The basics of variables <https://docs.blamejared.com/1.12/en/Vanilla/Variable_Types/Variable_Types/>`_
 * :doc:`Various useful LootTweaker tips and tricks <tips-and-tricks>`
-* `The MC Wiki Article on Loot Tables <https://minecraft.wiki/w/Loot_table?oldid=1192000>`_
+* `The MC Wiki Article on Loot Tables <https://minecraft.wiki/w/Loot_table?oldid=1192000>`_ (dead link, replacement pending)
 * :doc:`LootTweaker Tutorials <tutorials/tutorial-index>`

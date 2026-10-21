@@ -37,5 +37,5 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     :returns: the Looting enchantment level of this loot generation
 
-.. _luck: https://minecraft.fandom.com/wiki/Luck
+.. _luck: https://minecraft.wiki/w/Luck
 .. _null: https://docs.blamejared.com/1.12/en/Vanilla/Global_Functions/#isnull
