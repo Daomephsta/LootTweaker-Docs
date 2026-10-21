@@ -100,7 +100,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 
     :parameters:
         * zenFunction - a `ZenScript function <https://docs.blamejared.com/1.12/en/AdvancedFunctions/Custom_Functions>`_
-          with parameters ``(IRandom, LootContext)`` and return type ``boolean``.
+          with parameters ``(IRandom, LootContext)`` and return type ``bool``.
     :returns: a loot condition which passes if ``zenFunction`` returns true.
     :see:
         * `IRandom <https://docs.blamejared.com/1.12/en/Vanilla/Utils/IRandom/>`_
@@ -116,7 +116,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
         somePool.addItemEntry(
             <minecraft:potato>, 1, 0, [], // Arbitrary values for example purposes
             [
-                Conditions.zenscript(function(rng as IRandom, context as LootContext) as boolean
+                Conditions.zenscript(function(rng as IRandom, context as LootContext) as bool
                 {
                     return context.world().isRaining();
                 })
@@ -126,4 +126,4 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
 .. zenscript:type:: loottweaker.CustomLootCondition
 
     A `ZenScript function <https://docs.blamejared.com/1.12/en/AdvancedFunctions/Custom_Functions>`_
-    with parameters ``(IRandom, LootContext)`` and return type ``boolean``
+    with parameters ``(IRandom, LootContext)`` and return type ``bool``

@@ -95,9 +95,9 @@ ZenScript and CraftTweaker Types
 --------------------------------
 LootTweaker uses the following types from ZenScript itself and CraftTweaker
 
-.. zenscript:type:: boolean
+.. zenscript:type:: bool
 
-    A value that is either `true` or `false`
+    A value that is either `true` or `false`. Called boolean in Java and other languages.
 
 .. zenscript:type:: int
 

@@ -34,7 +34,7 @@ See :doc:`here <method-documentation-format>` for an explanation of the method d
             [] // Arbitrary value for example purposes
         );
 
-.. zenscript:function:: static LootFunction enchantWithLevels(int min, int max, boolean isTreasure)
+.. zenscript:function:: static LootFunction enchantWithLevels(int min, int max, bool isTreasure)
 
     :equivalent to: ``minecraft:enchant_with_levels``
 
